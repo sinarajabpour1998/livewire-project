@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button class="btn btn-normal pull-right btn-primary">Submit</button>
+                                        <button class="btn btn-normal pull-right btn-primary" wire:click="like">Submit</button>
                                     </div>
                                 </div>
                             </fieldset>

@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Modules\Comment\CommentServiceProvider::class,
 
         /*
          * Application Service Providers...

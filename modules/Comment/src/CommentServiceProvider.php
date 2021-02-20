@@ -24,7 +24,7 @@ class CommentServiceProvider extends ServiceProvider
      public function boot()
      {
          $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-         $this->loadViewsFrom(__DIR__ . '/views','comment');
+         $this->loadViewsFrom(__DIR__ . '/views','CommentModule');
          $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
          $this->mergeConfigFrom(__DIR__ . '/config/comment.php', 'comment');
          $this->publishes([
