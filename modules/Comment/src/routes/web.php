@@ -1,6 +1,5 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use Modules\Comment\Http\Livewire\Comments;
+use Modules\Comment\Http\Controllers\CommentController;
 
-
-Route::get('/', [Comments::class, 'render']);
+Route::get('/', [CommentController::class, 'index']);

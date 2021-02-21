@@ -9,6 +9,6 @@ class CommentController extends Controller
 {
     public function index()
     {
-//        return view('CommentModule::comment');
+        return view('CommentModule::index');
     }
 }

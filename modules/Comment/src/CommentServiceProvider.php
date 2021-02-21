@@ -3,6 +3,8 @@
 namespace Modules\Comment;
 
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
+use Modules\Comment\Http\Livewire\Counter;
 
 class CommentServiceProvider extends ServiceProvider
 {
@@ -14,6 +16,7 @@ class CommentServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        Livewire::component('CommentModule_counter', Counter::class);
     }
 
     /**
