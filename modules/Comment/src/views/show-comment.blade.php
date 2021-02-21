@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    <livewire:CommentModule::comment />
+                    <livewire:CommentModule::comment :comments="$comments" />
 
                 </div>
             </div>

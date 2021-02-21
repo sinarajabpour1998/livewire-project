@@ -19,16 +19,19 @@
 </form>
 
 <h3>4 Comments</h3>
-
-<div class="media">
-    <div class="media-body">
-        <h4 class="media-heading">{{ $comments['name'] }}</h4>
-        <p>{{ $comments['desc'] }}</p>
-        <ul class="list-unstyled list-inline media-detail pull-left">
-            <li><i class="fa fa-calendar"></i>{{ $comments['date'] }}</li>
-        </ul>
-        <ul class="list-unstyled list-inline media-detail pull-right">
-            <li class=""><a href="">Reply</a></li>
-        </ul>
+@forelse($comments as $comment)
+    <div class="media">
+        <div class="media-body">
+            <h4 class="media-heading">{{ $comment->user->name }}</h4>
+            <p>{{ $comment->description }}</p>
+            <ul class="list-unstyled list-inline media-detail pull-left">
+                <li><i class="fa fa-calendar"></i>{{ $comment->created_at }}</li>
+            </ul>
+            <ul class="list-unstyled list-inline media-detail pull-right">
+                <li class=""><a href="">Reply</a></li>
+            </ul>
+        </div>
     </div>
-</div>
+@empty
+    <p>No Comment</p>
+@endforelse

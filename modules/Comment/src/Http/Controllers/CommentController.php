@@ -4,6 +4,7 @@ namespace Modules\Comment\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Modules\Comment\Models\Comment;
 
 class CommentController extends Controller
 {
@@ -19,6 +20,9 @@ class CommentController extends Controller
 
     public function comment()
     {
-        return view('CommentModule::show-comment');
+        $comments = Comment::all();
+        return view('CommentModule::show-comment', [
+            'comments' => $comments
+        ]);
     }
 }
