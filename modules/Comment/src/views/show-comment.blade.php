@@ -1,5 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <livewire:CommentModule::comment />
+    <section class="content-item mt-4" id="comments">
+        <div class="container mb-5">
+            <div class="row">
+                <a href="/"><- Back</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+
+                    <livewire:CommentModule::comment />
+
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
