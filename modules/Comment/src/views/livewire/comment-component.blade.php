@@ -8,17 +8,20 @@
         <div class="row">
             <div class="form-group col-xs-12 col-sm-12 col-lg-12">
                 <textarea class="form-control" id="message" placeholder="Your message" rows="4" wire:model="message"></textarea>
+                @error('message')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn-normal pull-right btn-primary" wire:click="submit">Submit</button>
+                <a class="btn btn-normal pull-right btn-primary" wire:click="submit">Submit</a>
             </div>
         </div>
     </fieldset>
 </form>
 
-<h3>4 Comments</h3>
+<h3>{{ count($comments) }} Comments</h3>
 @forelse($comments as $comment)
     <div class="media">
         <div class="media-body">
@@ -35,3 +38,5 @@
 @empty
     <p>No Comment</p>
 @endforelse
+
+{{ $comments->links() }}

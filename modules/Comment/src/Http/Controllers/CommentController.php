@@ -20,9 +20,6 @@ class CommentController extends Controller
 
     public function comment()
     {
-        $comments = Comment::all();
-        return view('CommentModule::show-comment', [
-            'comments' => $comments
-        ]);
+        return view('CommentModule::show-comment');
     }
 }

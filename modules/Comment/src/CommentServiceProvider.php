@@ -4,8 +4,10 @@ namespace Modules\Comment;
 
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
-use Modules\Comment\Http\Livewire\Comment;
+use Modules\Comment\Facades\CommentsFacade;
+use Modules\Comment\Http\Livewire\CommentComponent;
 use Modules\Comment\Http\Livewire\Counter;
+use Modules\Comment\Repositories\CommentsRepository;
 
 class CommentServiceProvider extends ServiceProvider
 {
@@ -18,7 +20,8 @@ class CommentServiceProvider extends ServiceProvider
     {
         //
         Livewire::component('CommentModule::counter', Counter::class);
-        Livewire::component('CommentModule::comment', Comment::class);
+        Livewire::component('module-comment-component', CommentComponent::class);
+        CommentsFacade::shouldProxyTo(CommentsRepository::class);
     }
 
     /**
