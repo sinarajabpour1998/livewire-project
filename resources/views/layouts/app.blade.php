@@ -26,10 +26,9 @@
             @endauth
         </div>
     @endif
-</div>
-<div>
     @yield('content')
 </div>
+
 <livewire:scripts />
 </body>
 </html>

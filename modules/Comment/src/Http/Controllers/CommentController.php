@@ -11,4 +11,9 @@ class CommentController extends Controller
     {
         return view('CommentModule::index');
     }
+
+    public function counter()
+    {
+        return view('CommentModule::show-counter');
+    }
 }

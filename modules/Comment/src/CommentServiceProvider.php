@@ -16,7 +16,7 @@ class CommentServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        Livewire::component('CommentModule_counter', Counter::class);
+        Livewire::component('CommentModule::counter', Counter::class);
     }
 
     /**
