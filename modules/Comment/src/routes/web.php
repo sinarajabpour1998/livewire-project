@@ -5,4 +5,5 @@ use Modules\Comment\Http\Controllers\CommentController;
 Route::group(['middleware' => 'web'], function () {
     Route::get('/', [CommentController::class, 'index']);
     Route::get('/counter', [CommentController::class, 'counter'])->name('counter');
+    Route::get('/comment', [CommentController::class, 'comment'])->name('comment');
 });
